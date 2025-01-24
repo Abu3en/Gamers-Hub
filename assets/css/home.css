@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.site-name {
+    font-size: 2.5rem;
+    color: #ffa726;
+    margin-right: auto;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: #ffa726;
+    border: none;
+    color: #1e1e1e;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffa726;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #ffa726;
+    color: #1e1e1e;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.latest-game {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    text-align: center;
+    color: #ffa726;
+}
+
+.latest-game h2 {
+    margin-bottom: 1rem;
+}
+
+.game {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.game-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #c6c6c6;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.game-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.game-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.game-details p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #c6c6c6;
+}
+
+.view-all {
+    color: #ffa726;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #ffa726;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #ffa726;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .site-name {
+        font-size: 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        padding: 1rem;
+        border-radius: 5px;
+        position: absolute;
+        top: 80px;
+        left: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-title {
+        font-size: 1.3em;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 1.2em;
+    }
+
+
+    .game-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .game-details p {
+        font-size: 0.9em;
+    }
+}
